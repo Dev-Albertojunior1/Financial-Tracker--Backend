@@ -9,20 +9,20 @@ import lombok.Data;
 
 
 
-@Entity
 @Data
+@Entity
 public class FinancialRecord {
 
   @Id
-  
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
   private String description;
-  private Double amount;
+  private Double Amount;
   private String type; //depends 
+} 
   
-}
+
 
 
 
