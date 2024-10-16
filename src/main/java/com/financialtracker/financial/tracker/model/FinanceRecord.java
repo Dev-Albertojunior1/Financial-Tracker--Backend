@@ -1,10 +1,8 @@
 package com.financialtracker.financial.tracker.model;
 
+import jakarta.persistence.*;
 import org.springframework.data.annotation.Id;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import lombok.Data;
 
 @Data
@@ -19,6 +17,9 @@ public class FinanceRecord {
   private Double Amount;
   private String type;  //depends
 
+  @ManyToOne
+  @JoinColumn(name = "user_id")
+  private User user;
 }
 
 //description;
