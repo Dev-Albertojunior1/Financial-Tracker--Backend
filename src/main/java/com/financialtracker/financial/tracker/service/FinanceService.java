@@ -33,6 +33,15 @@ public class FinanceService {
         if (record != null){
             financeRecordRepository.delete(record);
         }
+    }
 
+    public FinanceRecord updateFinanceRecord(Long id, FinanceRecord updateRecord){
+        FinanceRecord existingRecord = financeRecordRepository.findByIdAndUser(id, getCurrentUser());
+        if (existingRecord != null){
+            existingRecord.setAmount(updateRecord.getAmount());
+            existingRecord.setDescription(updateRecord.getDescription());
+            existingRecord.setType(updateRecord.getType());
+            return financeRecordRepository.save(existingRecord);
+        }
     }
 }
