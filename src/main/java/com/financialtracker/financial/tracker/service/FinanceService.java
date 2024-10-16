@@ -43,5 +43,6 @@ public class FinanceService {
             existingRecord.setType(updateRecord.getType());
             return financeRecordRepository.save(existingRecord);
         }
+        return null;
     }
 }
