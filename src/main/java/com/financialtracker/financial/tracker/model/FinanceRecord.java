@@ -17,7 +17,7 @@ public class FinanceRecord {
 
   private String description;
   private Double Amount;
-  private String type; //depends
+  private String type;  //depends
 
 } 
   
