@@ -26,8 +26,7 @@ public class FinanceService {
     public FinanceRecord addFinanceRecord(FinanceRecord record){
         record.setUser(getCurrentUser());
         return financeRecordRepository.save(record);
-    }
-
+    }  
     public void deleteFinanceRecord(Long id){
         FinanceRecord record = financeRecordRepository.findByIdAndUser(id,getCurrentUser());
         if (record != null){
