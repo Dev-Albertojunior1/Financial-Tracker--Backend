@@ -19,8 +19,8 @@ public class FinanceRecord {
 
   @ManyToOne
   @JoinColumn(name = "user_id")
-  private User user;
-}   
+  private User user;   
+}
 
 //description;
  //amount;
