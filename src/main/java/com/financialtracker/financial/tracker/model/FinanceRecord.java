@@ -1,5 +1,5 @@
 package com.financialtracker.financial.tracker.model;
-
+  
 import jakarta.persistence.*;
 import org.springframework.data.annotation.Id;
 
@@ -21,7 +21,7 @@ public class FinanceRecord {
   @JoinColumn(name = "user_id")
   private User user;
 }
-  
+
 //description;
  //amount;
  //type;
