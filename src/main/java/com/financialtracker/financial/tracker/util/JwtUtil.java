@@ -11,10 +11,17 @@ import org.springframework.stereotype.Component;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 @Component
 public class JwtUtil {
 
     private String secret = "tutorial";
+    private long expiration = 3600000; // 1 hour
+
+    public String generateToken(User user){
+        Map<String , Objects> claims = new HashMap<>();
+        return createToken(claims, user.getUsername());
+    }
 }
 
