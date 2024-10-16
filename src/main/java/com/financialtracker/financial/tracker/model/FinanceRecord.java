@@ -21,8 +21,7 @@ public class FinanceRecord {
   @JoinColumn(name = "user_id")
   private User user;
 }
-
+  
 //description;
  //amount;
  //type;
-    
