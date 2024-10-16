@@ -19,13 +19,7 @@ public class FinanceRecord {
   private Double Amount;
   private String type;  //depends
 
-} 
-  
-
-
-
-
-
+}
 
 //description;
  //amount;
