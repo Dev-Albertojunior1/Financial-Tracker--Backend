@@ -11,3 +11,5 @@ public interface FinanceRecordRepository extends JpaRepository<FinanceRecord,Lon
     FinanceRecord findByIdAndUser (Long id , User user);
 
 }
+
+
