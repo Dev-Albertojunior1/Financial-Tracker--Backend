@@ -20,7 +20,7 @@ public class JwtUtil {
     private long expiration = 3600000; // 1 hour
 
     public String generateToken(User user){
-        Map<String , Objects> claims = new HashMap<>();
+        Map<String , Object> claims = new HashMap<>();
         return createToken(claims, user.getUsername());
     }
 
@@ -32,6 +32,11 @@ public class JwtUtil {
                 .setExpiration(new Date(System.currentTimeMillis() + expiration))
                 .signWith(SignatureAlgorithm.HS256, secret)
                 .compact();
+    }
+
+    public boolean validateToken(String token, User user) {
+        final String username = extractUsername(token);
+        return (username.equals(user.getUsername()) && !isTokenExpired(token));
     }
 }
 
