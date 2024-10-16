@@ -15,6 +15,6 @@ import java.util.Map;
 @Component
 public class JwtUtil {
 
-    
+    private String secret = "tutorial";
 }
 
