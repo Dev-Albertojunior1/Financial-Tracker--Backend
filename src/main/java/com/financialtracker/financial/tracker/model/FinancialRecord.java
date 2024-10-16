@@ -7,8 +7,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import lombok.Data;
 
-
-
 @Data
 @Entity
 public class FinancialRecord {
@@ -19,7 +17,8 @@ public class FinancialRecord {
 
   private String description;
   private Double Amount;
-  private String type; //depends 
+  private String type; //depends
+
 } 
   
 
