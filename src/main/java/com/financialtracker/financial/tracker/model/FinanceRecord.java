@@ -1,5 +1,5 @@
 package com.financialtracker.financial.tracker.model;
-  
+
 import jakarta.persistence.*;
 import org.springframework.data.annotation.Id;
 
