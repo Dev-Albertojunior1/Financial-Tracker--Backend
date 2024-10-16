@@ -18,7 +18,7 @@ public class FinanceService {
     private User getCurrentUser(){
         return (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
     }
-
+ 
     public List<FinanceRecord> getAllRecords(){
         return financeRecordRepository.findByUser(getCurrentUser());
     }
@@ -26,7 +26,7 @@ public class FinanceService {
     public FinanceRecord addFinanceRecord(FinanceRecord record){
         record.setUser(getCurrentUser());
         return financeRecordRepository.save(record);
-    }  
+    }
     public void deleteFinanceRecord(Long id){
         FinanceRecord record = financeRecordRepository.findByIdAndUser(id,getCurrentUser());
         if (record != null){
