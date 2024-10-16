@@ -8,7 +8,7 @@ import lombok.Data;
 @Data
 @Entity
 public class FinanceRecord {
-
+  
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
