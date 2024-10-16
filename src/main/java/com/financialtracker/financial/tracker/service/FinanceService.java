@@ -14,11 +14,11 @@ public class FinanceService {
 
     @Autowired
     private FinanceRecordRepository financeRecordRepository;
-
+  
     private User getCurrentUser(){
         return (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
     }
- 
+
     public List<FinanceRecord> getAllRecords(){
         return financeRecordRepository.findByUser(getCurrentUser());
     }
