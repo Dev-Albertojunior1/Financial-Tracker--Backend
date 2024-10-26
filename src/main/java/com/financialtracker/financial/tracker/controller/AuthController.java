@@ -19,14 +19,14 @@ public class AuthController {
 
     @Autowired
     private PasswordEncoder passwordEncoder;
-
+        
     @Autowired
     private AuthenticationManager authenticationManager;
 
     @Autowired
     private JwtUtil jwtUtil;
 
-    
+
 
 
 
