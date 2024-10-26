@@ -32,6 +32,7 @@ public class JwtUtil {
                 .setExpiration(new Date(System.currentTimeMillis() + expiration))
                 .signWith(SignatureAlgorithm.HS256, secret)
                 .compact();
+        
     }
 
     public boolean validateToken(String token, User user) {
