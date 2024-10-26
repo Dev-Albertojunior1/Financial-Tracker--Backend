@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
-    
+
 
     @Autowired
     private UserRepository userRepository;
@@ -26,7 +26,7 @@ public class AuthController {
     @Autowired
     private JwtUtil jwtUtil;
 
-
+    
 
 
 
