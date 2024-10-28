@@ -16,7 +16,7 @@ public class FinanceRecord {
   private String description;
   private Double Amount;
   private String type;  //depends
-
+    
   @ManyToOne
   @JoinColumn(name = "user_id")
   private User user;
