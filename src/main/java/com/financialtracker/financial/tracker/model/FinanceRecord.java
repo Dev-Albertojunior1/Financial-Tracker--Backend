@@ -1,30 +1,29 @@
 package com.financialtracker.financial.tracker.model;
 
 import jakarta.persistence.*;
-import org.springframework.data.annotation.Id;
 
 import lombok.Data;
 
-
+import org.springframework.data.annotation.Id;
 
 @Data
 @Entity
 public class FinanceRecord {
 
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-  private String description;
-  private Double Amount;
-  private String type;  //depends
+    private String description;
+    private Double Amount;
+    private String type; // depends
 
-  @ManyToOne
-  @JoinColumn(name = "user_id")
-  private User user;
-  
-}   
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+}
 
-//description;
- //amount;
- //type;
+// description;
+ // amount;
+ // type;
+
