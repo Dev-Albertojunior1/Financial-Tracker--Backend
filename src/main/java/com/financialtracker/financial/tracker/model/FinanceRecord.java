@@ -15,15 +15,18 @@ public class FinanceRecord {
     private Long id;
 
     private String description;
+
     private Double Amount;
+
     private String type; // depends
 
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
+
+    private String hello;
 }
 
 // description;
  // amount;
  // type;
-
